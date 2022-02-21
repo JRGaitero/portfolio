@@ -1,13 +1,56 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blink:after {
+    content: '|';
+    @apply text-gray-50
+    animate-blink
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.newLine {
+    white-space: pre-line;
+}
+
+.cryptarch {
+    background-image: url('../public/cryptarch.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.oopCards {
+    background-image: url('../public/oopCards.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.clickApi {
+    background-image: url('../public/clickApi.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.smartCafe {
+    background-image: url('../public/wip.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        opacity: 100;
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.bounce {
+    animation: bounce 1s infinite 4.5s;
 }
